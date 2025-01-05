@@ -1,3 +1,4 @@
 .env
 __pycache__/
 *_service_account.json
+outputs/

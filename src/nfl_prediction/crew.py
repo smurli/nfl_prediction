@@ -53,7 +53,9 @@ class NflPrediction:
 
     @task
     def nfl_task(self) -> Task:
-        return Task(config=self.tasks_config["nfl_task"], output_file="report.md")
+        return Task(
+            config=self.tasks_config["nfl_task"], output_file="outputs/report.md"
+        )
 
     @crew
     def crew(self) -> Crew:
