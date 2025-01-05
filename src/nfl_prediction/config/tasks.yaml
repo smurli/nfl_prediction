@@ -1,10 +1,10 @@
 nfl_task:
   description: >
-    Calculate the probability of the {team1} or {team2} winning the upcoming game on {date}.
+    Calculate the winning probability between {team1} vs {team2} for the upcoming game on {date}.
     Use the historical data of the teams, player statistics, and any other relevant information.
   expected_output: >
     Output the results in the following format: 
-      Probably winning team: <team>
+      Probable winning team: <team>
       Willing Probability: <probability %>
       Rationale:
       - <reason1>

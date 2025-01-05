@@ -1,6 +1,6 @@
 from crewai import Agent, Crew, Process, Task, Process
 from crewai.project import CrewBase, agent, crew, task
-from crewai_tools import SerperDevTool, ScrapeWebsiteTool
+from crewai_tools import SerperDevTool, ScrapeWebsiteTool, WebsiteSearchTool
 from chromadb.utils.embedding_functions import GoogleVertexEmbeddingFunction
 from langchain_openai import ChatOpenAI
 from langchain_google_vertexai import VertexAI
@@ -37,7 +37,11 @@ class NflPrediction:
     def nfl_research_agent(self) -> Agent:
         return Agent(
             config=self.agents_config["nfl_research_agent"],
-            tools=[SerperDevTool(), ScrapeWebsiteTool()],
+            tools=[
+                SerperDevTool(),
+                ScrapeWebsiteTool(),
+                WebsiteSearchTool(),
+            ],
             allow_delegation=False,
             llm=self.get_llm(),
             verbose=True,
