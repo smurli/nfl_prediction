@@ -1,0 +1,23 @@
+[project]
+name = "nfl_prediction"
+version = "0.1.0"
+description = "nfl_prediction using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]==0.67.1",
+    "ipykernel>=6.29.5",
+    "langchain-google-vertexai>=1.0.10",
+    "nflscraPy",
+]
+
+[project.scripts]
+nfl_prediction = "nfl_prediction.main:run"
+run_crew = "nfl_prediction.main:run"
+train = "nfl_prediction.main:train"
+replay = "nfl_prediction.main:replay"
+test = "nfl_prediction.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

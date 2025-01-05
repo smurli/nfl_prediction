@@ -1,0 +1,17 @@
+name: nfl_prediction
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - jupyterlab
+  - pip
+  - pip:
+      - requests
+      - tqdm
+      - crewai[tools]==0.79.0
+      - python-dotenv
+      - uv

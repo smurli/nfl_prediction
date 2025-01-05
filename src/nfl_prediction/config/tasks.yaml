@@ -1,0 +1,28 @@
+nfl_task:
+  description: >
+    Calculate the probability of the {team1} or {team2} winning the upcoming game on {date}.
+    Use the historical data of the teams, player statistics, and any other relevant information.
+  expected_output: >
+    Output the results in the following format: 
+      Probably winning team: <team>
+      Willing Probability: <probability %>
+      Rationale:
+      - <reason1>
+      - <reason2>
+      - <etc>
+  agent: nfl_expert
+
+nfl_momentum_task:
+  description: >
+    Analyze the momentum of the teams {team1} and {team2} based on their recent performances, player injuries, and game strategies.
+    Provide insights on which team has the upper hand in the upcoming game on {date}.
+  expected_output: >
+    Precise insights on the momentum of the teams and which team has the upper hand in the upcoming game.
+  agent: nfl_research_agent
+
+nfl_roster_change_task:
+  description: >
+    Investigate any significant roster changes or trades that have occured recently which might impact the dynamics.
+  expected_output: >
+    A precise and concise summary of the roster changes and how they might affect the team's performance.
+  agent: nfl_research_agent
